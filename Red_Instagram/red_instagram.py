@@ -1,27 +1,27 @@
-from .user import Usuario
-from .post import Publicacion
+from .user import User
+from .post import Post
 
 class RedInstagram:
     def __init__(self):
-        self.usuarios = {}
-        self.publicaciones = []
+        self.user = {}
+        self.post = []
 
     def registrar_usuario(self, username, password):
-        if username in self.usuarios:
+        if username in self.user:
             raise Exception("El nombre de usuario ya está en uso.")
-        self.usuarios[username] = Usuario(username, password)
+        self.user[username] = Usuario(username, password)
 
     def iniciar_sesion(self, username, password):
-        user = self.usuarios.get(username)
+        user = self.user.get(username)
         if user and user.contraseña == password:
             return user
         raise Exception("Credenciales incorrectas.")
 
     def agregar_publicacion(self, publicacion):
-        self.publicaciones.append(publicacion)
+        self.post.append(publicacion)
 
     def obtener_publicaciones(self):
-        return self.publicaciones
+        return self.post
 
 
 
