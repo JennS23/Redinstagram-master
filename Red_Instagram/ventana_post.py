@@ -9,8 +9,8 @@ class VentanaPost(tk.Frame):
 
     def create_widgets(self):
         tk.Label(self, text="Nueva Publicación", font=("Arial", 16)).pack(pady=10)
-        self.entry_publicacion = tk.Entry(self)
-        self.entry_publicacion.pack(pady=5)
+        self.entry_postn = tk.Entry(self)
+        self.entry_post.pack(pady=5)
 
         self.boton_publicar = tk.Button(self, text="Publicar", command=self.publicar)
         self.boton_publicar.pack(pady=10)
