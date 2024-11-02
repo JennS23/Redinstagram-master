@@ -1,7 +1,7 @@
 from .user import Usuario
 from .post import Publicacion
 
-class RedSocial:
+class RedInstagram:
     def __init__(self):
         self.usuarios = {}
         self.publicaciones = []
@@ -12,9 +12,9 @@ class RedSocial:
         self.usuarios[username] = Usuario(username, password)
 
     def iniciar_sesion(self, username, password):
-        usuario = self.usuarios.get(username)
-        if usuario and usuario.contraseña == password:
-            return usuario
+        user = self.usuarios.get(username)
+        if user and user.contraseña == password:
+            return user
         raise Exception("Credenciales incorrectas.")
 
     def agregar_publicacion(self, publicacion):
