@@ -5,7 +5,7 @@ class VentanaRegistro(tk.Frame):
     def __init__(self, master, red_social, volver_a_inicio_sesion):
         super().__init__(master)
         self.master = master
-        self.red_social = red_social
+        self.red_social = red_instagram
         self.volver_a_inicio_sesion = volver_a_inicio_sesion
         self.create_widgets()
 
